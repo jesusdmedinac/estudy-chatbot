@@ -1,8 +1,10 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Metadata } from "next";
 import { Toaster } from "sonner";
 
 import { Navbar } from "@/components/custom/navbar";
 import { ThemeProvider } from "@/components/custom/theme-provider";
+
 
 import "./globals.css";
 
@@ -30,6 +32,7 @@ export default async function RootLayout({
           <Navbar />
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
