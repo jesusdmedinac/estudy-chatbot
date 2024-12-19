@@ -21,14 +21,24 @@ import { Textarea } from "../ui/textarea";
 
 const suggestedActions = [
   {
-    title: "Help me book a flight",
-    label: "from San Francisco to London",
-    action: "Help me book a flight from San Francisco to London",
+    title: "Guíame para estimular el desarrollo motor",
+    label: "en un niño de 1 año con ejercicios prácticos",
+    action: "Proporcióname una guía para estimular el desarrollo motor en un niño de 1 año con ejercicios prácticos.",
   },
   {
-    title: "What is the status",
-    label: "of flight BA142 flying tmrw?",
-    action: "What is the status of flight BA142 flying tmrw?",
+    title: "Recomiéndame actividades cognitivas",
+    label: "para un niño de 2 años",
+    action: "Recomiéndame actividades cognitivas adecuadas para un niño de 2 años.",
+  },
+  {
+    title: "Dame consejos para mejorar la comunicación",
+    label: "en niños de 3 años",
+    action: "Dame consejos prácticos para mejorar la comunicación en niños de 3 años.",
+  },
+  {
+    title: "Enséñame cómo fomentar habilidades sociales",
+    label: "en un grupo de niños de 4 años",
+    action: "Enséñame cómo fomentar habilidades sociales en un grupo de niños de 4 años mediante juegos colaborativos.",
   },
 ];
 
@@ -216,7 +226,7 @@ export function MultimodalInput({
 
       <Textarea
         ref={textareaRef}
-        placeholder="Send a message..."
+        placeholder="Escribe algo..."
         value={input}
         onChange={handleInput}
         className="min-h-[24px] overflow-hidden resize-none rounded-lg text-base bg-muted border-none"

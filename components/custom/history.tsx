@@ -106,19 +106,19 @@ export const History = ({ user }: { user: User | undefined }) => {
         <SheetContent side="left" className="p-3 w-80 bg-muted">
           <SheetHeader>
             <VisuallyHidden.Root>
-              <SheetTitle className="text-left">History</SheetTitle>
+              <SheetTitle className="text-left">Historial</SheetTitle>
               <SheetDescription className="text-left">
-                {history === undefined ? "loading" : history.length} chats
+                {history === undefined ? "loading" : history.length} conversaciones
               </SheetDescription>
             </VisuallyHidden.Root>
           </SheetHeader>
 
           <div className="text-sm flex flex-row items-center justify-between">
             <div className="flex flex-row gap-2">
-              <div className="dark:text-zinc-300">History</div>
+              <div className="dark:text-zinc-300">Historial</div>
 
               <div className="dark:text-zinc-400 text-zinc-500">
-                {history === undefined ? "loading" : history.length} chats
+                {history === undefined ? "loading" : history.length} conversaciones
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ export const History = ({ user }: { user: User | undefined }) => {
                 asChild
               >
                 <Link href="/">
-                  <div>Start a new chat</div>
+                  <div>Iniciar una conversación</div>
                   <PencilEditIcon size={14} />
                 </Link>
               </Button>
@@ -140,14 +140,14 @@ export const History = ({ user }: { user: User | undefined }) => {
               {!user ? (
                 <div className="text-zinc-500 h-dvh w-full flex flex-row justify-center items-center text-sm gap-2">
                   <InfoIcon />
-                  <div>Login to save and revisit previous chats!</div>
+                  <div>¡Inicia sesión para guardar tus conversaciones!</div>
                 </div>
               ) : null}
 
               {!isLoading && history?.length === 0 && user ? (
                 <div className="text-zinc-500 h-dvh w-full flex flex-row justify-center items-center text-sm gap-2">
                   <InfoIcon />
-                  <div>No chats found</div>
+                  <div>No se encontraron conversaciones</div>
                 </div>
               ) : null}
 
